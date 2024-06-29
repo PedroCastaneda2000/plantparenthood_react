@@ -1,4 +1,3 @@
-import React from 'react'
 import youtubeIcon from '../assets/youtube-icon.svg'
 import instagramIcon from '../assets/instagram-icon.svg'
 import pinterestIcon from '../assets/pinterest-icon.svg'

@@ -1,4 +1,3 @@
-import React from 'react';
 import anthCanvas from '../assets/Canvases/anth_canvas.png';
 
 const Recommendations = () => {

@@ -1,40 +1,40 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'swiper/swiper-bundle.css';
 
 import agloEmeraldCanvas from '../assets/Canvases/Aglo-Emerald-Canvas.png';
-import agloCamelCanvas from '../assets/Canvases/Aglo-Camel-Canvas.png';
-import agloCharcoalCanvas from '../assets/Canvases/Aglo-Charcoal-Canvas.png';
-import agloCobaltCanvas from '../assets/Canvases/Aglo-Cobalt-Canvas.png';
-import agloTangerineCanvas from '../assets/Canvases/Aglo-Tangerine-Canvas.png';
+// import agloCamelCanvas from '../assets/Canvases/Aglo-Camel-Canvas.png';
+// import agloCharcoalCanvas from '../assets/Canvases/Aglo-Charcoal-Canvas.png';
+// import agloCobaltCanvas from '../assets/Canvases/Aglo-Cobalt-Canvas.png';
+// import agloTangerineCanvas from '../assets/Canvases/Aglo-Tangerine-Canvas.png';
 
-interface CartProductCardProps {
-  selectedColor: string | null;
-}
+// interface CartProductCardProps {
+//   selectedColor: string | null;
+// }
 
 const CartProductCard = () => {
-  const [currentImage, setCurrentImage] = useState<string>(agloEmeraldCanvas);
-  const [currentColor, setCurrentColor] = useState<string>('emerald');
-  const [currentQuantity, setCurrentQuantity] = useState<number>(1);
+  const [currentImage] = useState<string>(agloEmeraldCanvas);
+  const [currentColor] = useState<string>('emerald');
+  // const [currentQuantity, setCurrentQuantity] = useState<number>(1);
 
-  const slides = [
-    { url: agloEmeraldCanvas, color: 'emerald' },
-    { url: agloCobaltCanvas, color: 'cobalt' },
-    { url: agloTangerineCanvas, color: 'tangerine' },
-    { url: agloCamelCanvas, color: 'camel' },
-    { url: agloCharcoalCanvas, color: 'charcoal' }
-  ];
+  // const slides = [
+  //   { url: agloEmeraldCanvas, color: 'emerald' },
+  //   { url: agloCobaltCanvas, color: 'cobalt' },
+  //   { url: agloTangerineCanvas, color: 'tangerine' },
+  //   { url: agloCamelCanvas, color: 'camel' },
+  //   { url: agloCharcoalCanvas, color: 'charcoal' }
+  // ];
 
-  const handleColorChange = (color: string) => {
-    const selectedSlide = slides.find(slide => slide.color === color);
-    if (selectedSlide) {
-      setCurrentColor(color);
-      setCurrentImage(selectedSlide.url);
-    }
-  };
+  // const handleColorChange = (color: string) => {
+  //   const selectedSlide = slides.find(slide => slide.color === color);
+  //   if (selectedSlide) {
+  //     setCurrentColor(color);
+  //     setCurrentImage(selectedSlide.url);
+  //   }
+  // };
 
-  const handleQuantityChange = (quantity: number) => {
-    setCurrentQuantity(quantity);
-  };
+  // const handleQuantityChange = (quantity: number) => {
+  //   setCurrentQuantity(quantity);
+  // };
 
   return (
 <main className="flex flex-col md:flex-row text-black gap-4 w-full">
