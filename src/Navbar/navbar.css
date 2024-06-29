@@ -1,0 +1,19 @@
+.mobile-hidden {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobile-visible {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar-hidden {
+  transform: translateX(200%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar-visible {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
