@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import 'swiper/swiper-bundle.css';
 
 import agloEmeraldCanvas from '../assets/Canvases/Aglo-Emerald-Canvas.png';

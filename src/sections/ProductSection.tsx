@@ -31,7 +31,8 @@ const ProductSection: React.FC = () => {
     <section className='bg-solid-gradient flex justify-center items-center mb-8'>
       <div className="md:grid md:px-16 md:grid-cols-[minmax(0,1fr)_360px] md:gap-x-6 md:gap-y-6 md:py-4 w-full max-w-screen-xl">
         <div className="md:grid-row-1">
-          <ProductSlider selectedColor={selectedImage} />
+          <ProductSlider selectedColor={selectedColor} />
+          <img className="hidden" src={selectedImage} alt="" />
           <div className="hidden flex-col gap-4 md:flex md:mt-4 md:gap-6">
             <ImageSelection onImageSelect={handleColorSelect} />
             <ProductRecommendations />
