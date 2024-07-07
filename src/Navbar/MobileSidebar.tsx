@@ -1,4 +1,3 @@
-import HeartProductCard from './HeartProductCard.tsx';
 import darkIcon from "../assets/dark-logo-icon.svg";
 
 const HeartSidebar = () => {
