@@ -473,15 +473,6 @@ const Navbar = () => {
           <img className='w-[104px] h-full object-cover hidden md:flex' src={desktopLogo} alt="Desktop Logo" />
           
           <hr className="hidden  md:flex w-[24px] h-[2px] bg-secondary-solid rounded"></hr>
-          {/* <div className={`search-container relative flex items-center`}>
-            <input type="text" className={`search-input text-16sm text-black placeholder:text-light-gray ${isSearchVisible ? 'open' : ''}`} placeholder="Search..." />
-            <button onClick={toggleSearchVisibility} className='w-5 h-5'>
-              <img className='w-5 h-5' src={searchIcon} alt="Search" />
-            </button>
-            
-            
-          </div>
-          <hr className="hidden  md:flex w-[24px] h-[2px] bg-secondary-solid rounded"></hr> */}
           {/* Desktop Navigation Links */}
           <ul className='hidden md:flex gap-4'>
             {navLinks.map(link => (
@@ -504,7 +495,7 @@ const Navbar = () => {
           </button>
           <hr className='bg-secondary-solid rounded-sm w-[2px] h-[24px]'></hr>
           <div className={`search-container relative flex items-center`}>
-            <input type="text" ref={searchInputRef} className={`search-input text-16sm text-black placeholder:text-light-gray ${isSearchVisible ? 'open' : ''}`} placeholder="Search..." />
+            <input type="text" ref={searchInputRef} className={`search-input text-16sm text-black placeholder:text-light-gray ${isSearchVisible ? 'open' : ''}`} placeholder="Search Plants..." />
             <button onClick={toggleSearchVisibility} className='w-5 h-5'>
               <img className='w-5 h-5' src={searchIcon} alt="Search" />
             </button>
@@ -522,7 +513,7 @@ const Navbar = () => {
         {isProfileVisible && <div className="fixed inset-0 bg-black bg-opacity-50 z-10" onClick={closeNav}></div>}
 
         {/* Mobile Navigation Menu */}
-        <aside className={`fixed w-[60%] left-0 top-0 md:w-full md:max-w-[40%] px-4 py-2  h-full border-r-2 shadow-primary-drop border-primary-stroke bg-solid-gradient z-20 ${isNavVisible ? 'mobile-visible' : 'mobile-hidden'}`} onClick={(e) => e.stopPropagation()}>
+        <aside className={`fixed w-[256px] left-0 top-0 md:w-full md:max-w-[40%] px-4 py-2  h-full border-r-2 shadow-primary-drop border-primary-stroke bg-solid-gradient z-20 ${isNavVisible ? 'mobile-visible' : 'mobile-hidden'}`} onClick={(e) => e.stopPropagation()}>
           <MobileSidebar/>
         </aside>
 

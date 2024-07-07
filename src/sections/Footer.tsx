@@ -30,7 +30,7 @@ const Footer = () => {
       <section className='flex flex-col items-center gap-4 w-full'>
         <div className="w-full flex flex-col items-center gap-2">
           <img className='md:hidden' src={logoSecondIcon} alt="Logo Second Icon" />
-          <div className="flex justify-between w-full text-white text-28md font-serif uppercase font-semibold">
+          <div className="hidden md:flex justify-between w-full text-white text-28md font-serif uppercase font-semibold">
             <h2>plant</h2>
             <h2>parenthood</h2>
           </div>

@@ -8,49 +8,55 @@ const HeartSidebar = () => {
     { id: 2, text: 'Plants' },
     { id: 3, text: 'Care' },
   ];
+
+  const productLinks = [
+    { id: 4, text: 'Your Wishlist' },
+    { id: 5, text: 'Your Cart' },
+  ];
+
+  const userLinks = [
+    { id: 6, text: 'Sign up / Log In' },
+  ];
   return (
-    <aside className="flex flex-col h-full justify-between pb-4 overflow-y-auto overflow-x-hidden hide-scrollbar">
-      <header className="flex justify-center flex-col gap-1.5 h-full">
-      <img className='w-[104px] h-[48px]] object-cover md:hidden' src={darkIcon} alt="Logo" />
-      <div className="flex w-full h-[1.5px] bg-secondary-solid rounded"></div>
-      <div className='text-18sm text-black'>
-        <h1>Search NOW</h1>
-      </div>
-            {/* Mobile Navigation Links */}
-        <ul className="flex flex-col gap-4">
+    <aside className="flex flex-col h-full pb-4 overflow-y-auto overflow-x-hidden hide-scrollbar">
+      <header className="flex justify-center flex-col gap-1.5 mb-2">
+        <img className='w-[104px] h-[48px]] object-cover md:hidden' src={darkIcon} alt="Logo" />
+        <hr className="flex w-full h-[2px] bg-secondary-solid rounded mb-2"/>
+        <div className='px-2 h-[40px] text-18sm text-black border-[1.5px]  border-black rounded flex justify-center items-center'>
+          <input type="text" className={`w-full text-16sm text-black  placeholder:text-light-gray`} placeholder="Search Plants..." />
+        </div>
+      </header>
+      
+      <main className='flex flex-col gap-4 w-full text-black'>
+        <ul className="flex flex-col gap-2 w-full">
           {navLinks.map(link => (
-            <li key={link.id} className='h-[48px] text-black text-16sm font-inter font-medium cursor-pointer hover:bg-primary-white rounded hover:shadow-primary-drop hover:border hover:border-primary-stroke p-2'>
-              <a href="#">{link.text}</a>
-            </li>
+            <li key={link.id} className=''>
+            <a className=' px-2 flex items-center w-full h-[48px] text-[#151823] text-16sm font-inter font-medium cursor-pointer hover:bg-[#151823] hover:text-white rounded transition duration-500 ease-in-out' href="#">{link.text}</a>
+          </li>
           ))}
         </ul>
-        <div className="flex w-full h-[1.5px] bg-secondary-solid rounded"></div>
-      </header>
-      
-    <main className='flex flex-col gap-4 w-full text-black'>
-      <div className="">
-        <img src="" alt="" />
-        <h1>Profile</h1>
-      </div>
-      <h1>Your Cart</h1>
-      <h1>Your Wishlist</h1>
-
-      <header className="flex justify-between items-center ">
-        <h1 className='text-black text-20md font-semibold font-serif capitalize'>
-          Your Wishlist <span className='text-16sm font-serif'>(3)</span>
-        </h1>
-      </header>
-      <hr className="hidden md:flex w-full h-[1.5px] bg-secondary-solid rounded " />
-      <section className='flex flex-col gap-8'>
-        <HeartProductCard />
-        <HeartProductCard />
-        <HeartProductCard />
-      </section>
-      
-    </main>
-    <footer>
-    </footer>
-  </aside>
+        <hr className="flex w-full h-[2px] bg-secondary-solid rounded"/>
+        <ul className='flex flex-col gap-2 w-full'>
+          {productLinks.map(link => (
+              <li key={link.id} className=''>
+              <a className='px-2  flex items-center w-full h-[48px] text-[#151823] text-16sm font-inter font-medium cursor-pointer hover:bg-[#151823] hover:text-white rounded transition duration-500 ease-in-out' href="#">{link.text}</a>
+            </li>
+            ))}
+        </ul>
+        
+        <hr className="flex w-full h-[2px] bg-secondary-solid rounded " />
+        <ul className='flex flex-col gap-2 w-full'>
+          {userLinks.map(link => (
+              <li key={link.id} className=''>
+              <a className='px-2  flex items-center w-full h-[48px] text-[#151823] text-16sm font-inter font-medium cursor-pointer hover:bg-[#151823] hover:text-white rounded transition duration-500 ease-in-out' href="#">{link.text}</a>
+            </li>
+            ))}
+        </ul>
+        
+      </main>
+      <footer>
+      </footer>
+    </aside>
 
   );
 }
